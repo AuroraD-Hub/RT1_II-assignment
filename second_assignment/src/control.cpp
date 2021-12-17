@@ -109,8 +109,6 @@ int main (int argc, char **argv)
 	// Initialize the node, setup the NodeHandle for handling the communication with the ROS system
 	ros::init(argc, argv, "stageros_control");
 	ros::NodeHandle nh;
-		
-	//ros::Rate loop_rate(10);
 	
 	/* Define the publisher to /cmd_vel, the subscriber to /base_scan robot topics and the client of 
 	   /velocity custom service*/
@@ -120,7 +118,6 @@ int main (int argc, char **argv)
 	client_vel.call(k);
 	
 	ros::spin();
-	//loop_rate.sleep();
 	
 	return 0;
 }

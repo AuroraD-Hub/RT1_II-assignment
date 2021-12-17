@@ -41,13 +41,10 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "server_node");
 	ros::NodeHandle ns;
 	
-	//ros::Rate loop_rate(10);
-	
 	// Define the server for /velocity custom service
 	ros::ServiceServer service = ns.advertiseService("/velocity", callback_srv);
 	
 	ros::spin();
-	//loop_rate.sleep();
 	
 	return 0;
 }

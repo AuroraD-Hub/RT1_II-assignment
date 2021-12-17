@@ -47,8 +47,6 @@ int main (int argc, char **argv)
 	ros::init(argc, argv, "stageros_interact");
 	ros::NodeHandle nh;
 	
-	//ros::Rate loop_rate(10);
-	
 	// Define the clients for /velocity custom service and /reset_positions service
 	client_vel = nh.serviceClient<assignment_srv::Velocity_assignment>("/velocity");
 	client_res_pos = nh.serviceClient<std_srvs::Empty>("/reset_positions");
@@ -61,8 +59,6 @@ int main (int argc, char **argv)
 		
 		ros::spinOnce();
 	}
-	
-	//loop_rate.sleep();
 	
 	return 0;
 }

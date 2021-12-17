@@ -150,6 +150,7 @@ include_directories(
 ## same as for the library above
  add_dependencies(control_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
  add_dependencies(interact_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ add_dependencies(control_node ${catkin_EXPORTED_TARGETS})
  add_dependencies(interact_node ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
