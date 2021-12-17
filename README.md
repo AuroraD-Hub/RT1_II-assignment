@@ -25,10 +25,11 @@ roscore &
 rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
 ```
 You should see the following arena:![stage-000000](https://user-images.githubusercontent.com/72380912/146173933-1902c107-ac68-41ad-8a43-cf7b48c94b53.png)
-To run the assignment open two other terminals and digit in them respectively:
+To run the assignment open three other terminals and digit in them respectively:
 ```
 rosrun second_assignment control_node
 rosrun second_assignment interact_node
+rosrun assignment_srv server_node
 ```
 ## Assignment
 For this assignment the robot (blue dot in the previous image) has to move autonomously inside the arena. In fact, it is endowed with lasers scanners that gives information about the environment and the edges of the circuit. Moreover, an external user should be able to increase/decrease the velocity and to reset the robot position.
