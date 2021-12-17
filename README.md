@@ -48,7 +48,7 @@ By subscribing to the `/base_scan` topic, the node has access to many fields amo
 This topic type is `sensor_msgs::LaserScan`.
 
 ### Velocity ###
-By publishing into the `/cmd_vel` topic, the node can modify its fileds:
+By publishing into the `/cmd_vel` topic, the node can modify its fields:
 * *linear*: linear velocity array
   * *x*,*y*: direction of the linear velocity
 * *angular*: angular velocity array
@@ -62,6 +62,6 @@ By calling `/reset_positions` service, the node initializes a client with empty 
 This service type is `std_srvs::Empty`.
 
 ### Custom velocity ###
-By calling `velocity` custom service, the node implements the algorithm to increase or decrease the robot velocity according to user inputs.
+By calling `/velocity` custom service, the node implements the algorithm to increase or decrease the robot velocity according to user inputs.
 
 This service type is `assigment_srv::Velocity_assignment`, which has a `char` as request and two `float` and `char` as response.
